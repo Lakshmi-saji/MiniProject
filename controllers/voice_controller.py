@@ -6,9 +6,9 @@ from flask import (Blueprint, render_template, request, redirect, url_for,
 from flask_login import current_user
 from werkzeug.utils import secure_filename
 from app import db
-from app.models.voice_model import VoiceSample, Features, Prediction
-from app.ml.features import preprocess_audio_titan, extract_plmpva_features
-from app.ml.predictor import predictor
+from models.voice_model import VoiceSample, Features, Prediction
+from ml.features import preprocess_audio_titan, extract_plmpva_features
+from ml.predictor import predictor
 import traceback
 
 voice_bp = Blueprint('voice', __name__)
