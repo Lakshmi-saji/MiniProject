@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, redirect, url_for, request, session, flash
 from flask_login import current_user, login_required
 from models.user import User, PatientDetails
-from app.models.voice_model import Prediction, VoiceSample
+from models.voice_model import Prediction, VoiceSample
 from app import db
 
 main_bp = Blueprint('main', __name__)
