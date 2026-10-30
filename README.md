@@ -162,9 +162,9 @@ The project considers features such as:
 
 The Z-score is calculated using:
 
-```text
+
 Z = (Observed Value - Reference Mean) / Reference Standard Deviation
-```
+
 
 The resulting feature scores are combined using weighted mathematical analysis.
 
@@ -178,12 +178,12 @@ The final prediction combines the CNN output and SLA output.
 
 The current hybrid calculation is:
 
-```text
+
 Final Probability =
     (CNN Probability × 0.70)
     +
     (SLA Probability × 0.30)
-```
+
 
 The CNN contributes 70% of the combined score.
 
@@ -246,45 +246,7 @@ These categories represent the application's estimated output and are not clinic
 
 ---
 
-## 📂 Project Structure
 
-The following is the expected project structure. Actual filenames may differ depending on the current implementation.
-
-```text
-NEUROVOICE-AI/
-│
-├── app.py
-│
-├── feature.py
-│
-├── predictor.py
-│
-├── requirements.txt
-│
-├── ml_model/
-│   └── clinical_v65_cnn.h5
-│
-├── dataset/
-│   ├── healthy/
-│   │   └── HC_AH/
-│   │
-│   └── parkinsons/
-│       └── PD_AH/
-│
-├── templates/
-│   ├── index.html
-│   ├── login.html
-│   └── result.html
-│
-├── static/
-│   ├── css/
-│   ├── js/
-│   └── images/
-│
-├── uploads/
-│
-└── README.md
-```
 
 ### Important Files
 
@@ -302,107 +264,7 @@ NEUROVOICE-AI/
 
 ---
 
-## 💻 Installation and Setup
 
-### Prerequisites
-
-Install the following:
-
-- Python 3.10 or another version compatible with the project's dependencies.
-- pip.
-- Git.
-- A code editor such as Visual Studio Code.
-
-### 1. Clone the Repository
-
-```bash
-git clone YOUR_REPOSITORY_URL
-```
-
-Navigate to the project directory:
-
-```bash
-cd NEUROVOICE-AI
-```
-
-Replace `YOUR_REPOSITORY_URL` with the actual GitHub repository URL.
-
-### 2. Create a Virtual Environment
-
-For macOS or Linux:
-
-```bash
-python3 -m venv venv
-```
-
-Activate the virtual environment:
-
-```bash
-source venv/bin/activate
-```
-
-### 3. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-If a requirements file is not available, install the dependencies used by the project:
-
-```bash
-pip install flask tensorflow librosa numpy scipy soundfile
-```
-
-If noise reduction is enabled:
-
-```bash
-pip install noisereduce
-```
-
-### 4. Verify the Model File
-
-Ensure that the trained CNN model is available at:
-
-```text
-ml_model/clinical_v65_cnn.h5
-```
-
-The model file must be compatible with the TensorFlow/Keras version used by the application.
-
-### 5. Run the Application
-
-```bash
-python app.py
-```
-
-The Flask application will display a local address in the terminal.
-
-Open the address in your browser.
-
-For example:
-
-```text
-http://127.0.0.1:5000
-```
-
-The actual port depends on the Flask configuration.
-
----
-
-## 🚀 How to Use
-
-1. Start the Flask application.
-2. Open the application in a web browser.
-3. Record a voice sample using the microphone or upload an audio file.
-4. Submit the voice recording.
-5. The application preprocesses the audio.
-6. The system extracts voice features and generates a Mel Spectrogram.
-7. The CNN model analyzes the spectrogram.
-8. SLA analyzes selected voice characteristics.
-9. The CNN and SLA results are combined.
-10. The application displays the estimated risk category.
-
----
 
 ## 📊 Dataset
 
@@ -410,13 +272,13 @@ The project uses voice recordings containing healthy and Parkinson's voice sampl
 
 The dataset is organized into two main categories:
 
-```text
+
 dataset/
 │
 ├── healthy/
 │
 └── parkinsons/
-```
+
 
 The healthy category contains voice recordings from healthy participants.
 
@@ -444,13 +306,27 @@ The training process includes:
 
 The trained model is saved as:
 
-```text
+
 ml_model/clinical_v65_cnn.h5
-```
+
 
 The application loads this model during prediction.
 
 ---
+
+##Screenshots
+
+
+<img width="1225" height="834" alt="Screenshot 2026-10-30 at 19 34 22" src="https://github.com/user-attachments/assets/38f0ddb3-cabe-4cbb-85c0-987230459a9c" />
+
+<img width="1232" height="976" alt="Screenshot 2026-10-30 at 19 34 33" src="https://github.com/user-attachments/assets/d8ca5235-e904-4e70-8ea2-8d7387c5cdaf" />
+
+<img width="1720" height="996" alt="Screenshot 2026-10-30 at 19 34 42" src="https://github.com/user-attachments/assets/518291b1-36f8-4ee7-90a2-5cb6c925cfe3" />
+
+<img width="1725" height="984" alt="Screenshot 2026-10-30 at 19 35 42" src="https://github.com/user-attachments/assets/32366dbf-b90f-4fdd-934d-a51eb6475db0" />
+
+
+
 
 ## 🔐 Privacy and Security
 
