@@ -64,6 +64,7 @@ The system combines the results from the CNN model and SLA analysis to generate 
 
 The application follows a pipeline-based architecture.
 
+![System Architecture](<img width="1672" height="941" alt="NeuroVoice AI System Architecture" src="https://github.com/user-attachments/assets/bbf9f71d-1e0d-4900-9eb0-bea69cdc31b0" />
 
 
 ---
